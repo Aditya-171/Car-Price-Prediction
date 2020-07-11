@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Galada&display=swap" rel="stylesheet">
+	<title>Car Price Prediction</title>
+	<image  scr="{{url_for('static', filename='image.png')}}">
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+   <style>
+body,html{
+	padding:0;
+	margin: 0;
+}
+.def{
+	/*background-image: {{url_for('static', filename='image.png')}};*/
+	position: relative;
+  text-align: center;
+  color: white;
+
+}
+   	input[type="text"]::placeholder
+   	{ 
+   		text-align: center;
+   	}
+        
+    			input {
+             width: 300px;
+             margin: 8px 10px;
+             padding: 11px 18px;
+             border-radius:50px;
+             box-shadow: 0px 2px 4px #ccc;
+             margin-bottom:8px;
+             box-sizing: border-box;
+             outline: none;
+             text-align: center;
+             border:1px solid red;
+                }
+
+        
+ /*tag*/
+/*.select  class*/
+/*#select id*/
+         select {
+             width: 300px;
+             margin: 8px 10px;
+             padding: 12px 20px;
+             border-radius:50px;
+             box-shadow: 0px 2px 4px #ccc;
+             margin-bottom:10px;
+             box-sizing: border-box;
+             text-align-last:center;
+             outline: none;
+              text-align: center;
+              border:1px solid red;
+    /*padding-right: 29px;*/
+    /*direction: rtl;*/
+                }   
+         option{
+         	text-align-last: center;
+         }
+        input[type="submit"]{border:2px solid #000;}
+          input[type="submit"]:hover{  
+          background: blue;
+          color:#fff;
+          font-size: 20px;   
+          	}
+
+   .abc{position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);}
+  /*margin-bottom: 5px;margin-left:38%;*/
+   .footer{
+   	position:fixed;
+   	bottom: 0;
+   	background-color: #ccc;
+   	padding: 5px 5px;
+   	box-sizing: border-box;
+   	width: 100%;
+   	height: 60px;
+   	left:0;
+   	color:#fff;
+   	text-align: center;
+   	font-family: 'Fondamento', cursive;
+
+   	/*float: left;*/
+   }
+   img{
+   	width: 100%;
+   	height: auto;
+   	opacity: 0.7;
+
+   }
+   </style>
+
+
+
+</head>
+<body>
+	
+	<div class="def" style="background-image: {{ url_for('static', filename='image.png') }}">
+		<img src="{{url_for('static', filename='image.png')}}" >
+	<div class="abc">
+		  <h1 style="color: blue; font-family: 'Galada', cursive;  font-size: 55px;padding: 0;margin: 0;"  >Car Price Prediction</h1>
+		  <form action="{{ url_for('predict') }}" method="POST">
+		  <input class="form-input align-center" type="text" name="km_driven" placeholder="Kilometers Driven eg. 24000"><br>
+		  <input class="form-input align-center" type="text" name="present_price" placeholder="Present Price(in Lakhs) eg. 5.5"><br>
+
+          <select class="form-input align-center" name="no_owner">
+            <option data-tokens="" value="none">--- Select Total no of Owners ---</option>
+            <option data-tokens="0" value="1">0</option>
+            <option data-tokens="1" value="1">1</option>
+            <option data-tokens="3" value="3">3</option>
+          </select><br>
+          <input class="form-input  align-center" type="text" name="no_year" placeholder="No of years old eg. 5"><br>
+
+        <select class="form-input align-center" name="fuel_type">
+            <option data-tokens="" value="none">--- Select Type of Fuel ---</option>
+            <option data-tokens="Petrol" value="petrol">Petrol</option>
+            <option data-tokens="desiel" value="desiel">Desiel</option>
+            <option data-tokens="CNG" value="cng">CNG</option>
+          </select><br>
+
+        <select class="form-input align-center" name="seller_type">
+            <option data-tokens="" value="none">--- Select Type of Seller ---</option>
+            <option data-tokens="individual" value="individual">Individual</option>
+            <option data-tokens="dealer" value="dealer">Dealer</option><br>
+          </select><br>
+
+          <select class="form-input align-center"name="Transmission_Mannual" >
+             <option data-tokens="" value="none">--- Select Type of Transmission ---</option>
+             <option data-tokens="Mannual" value="Mannual">Manual Car</option>
+             <option data-tokens="Automatic" value="Automatic">Automatic Car</option>
+            </select><br><br>
+
+         <input type="submit" class="btn" value="Predict">
+     </form>
+</div>
+    
+     <div class='footer'>
+        <div class="contact">
+               <a target="_blank" href="https://github.com/Aditya-171"><i class="fa fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/aditya-soni-66506117a/"><i class="fa fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description' style="margin: 0;padding: 0;color:#0A79DF;" >Made by Aditya Soni</p>
+       </div>
+   
+
+
+</div>
+</body>
+</html>
