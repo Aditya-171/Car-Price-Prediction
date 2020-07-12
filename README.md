@@ -1,6 +1,7 @@
 # Car-Price-Prediction
 Demo link-[Click here](https://car-price-prediction-aditya.herokuapp.com)
-![Car Price Prediction](https://car-price-prediction-aditya.herokuapp.com)
+
+![Car Price Prediction](https://drive.google.com/file/d/1G7R2BaQp_GGryKwOrr7nZKgntMRqbx8J/view?usp=sharing)
 
 
 
