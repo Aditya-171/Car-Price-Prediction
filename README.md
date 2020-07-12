@@ -1,5 +1,5 @@
 # Car-Price-Prediction
-Demo link-https://car-price-prediction-aditya.herokuapp.com/
+Demo link-[Click here](https://car-price-prediction-aditya.herokuapp.com)
 ---
 
 Project description
