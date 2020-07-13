@@ -17,3 +17,5 @@ This application predicts the price of a car based on few inputs. For eg: Transm
 2. Algorithms and Technologies used: Random Forest ,Python ,Jupyter Notebook ,Flask.
 
 3. Completed End-to-End implementation by creating a Web App using Flask
+
+---
